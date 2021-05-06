@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <title>To Do list</title>
+</head>
+<body>
+  <div id="app">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="">
+    </div>
+    <!-- classe che contiene il box di input text e un tasto invio -->
+    <div class="sezInput">
+      <h3 v-if="alertText">Attenzione!! Testo inserito troppo breve</h3>
+      <input  v-model="strToDo" 
+      @keyup.enter="addToDo" 
+      type="text" name="" id="" placeholder="inserisci il testo qui">
+      <button @click = "addToDo">INVIO</button>
+    </div>
+    <div class="sezLista">
+      <ul>
+        <li v-for="(todo,index) in todos"
+          :class ="(todo.checked) ? 'checked' : null"
+          :style="(index === todos.length - 1) ? 'border:none' : null"
+          @click ="todo.checked = !todo.checked"
+        >
+          {{todo.text}}
+          <i 
+          @click.stop = "deleteToDo(index)"
+          class="fas fa-skull-crossbones"></i>
+        </li>
+      </ul>
+
+    </div>
+
+
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

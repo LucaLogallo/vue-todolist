@@ -1,0 +1,83 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#app{
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+  
+}
+
+.sezInput{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.sezInput h3{
+  margin: 15px;
+  color: red;
+}
+
+.sezInput input{
+  width: 300px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.sezInput button {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px #000000;
+  margin-left: 30px;
+}
+
+.sezLista{
+  margin: 20px;
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+.sezLista ul{
+  list-style: none;
+  padding: 5px;
+}
+
+.sezLista ul li{
+  padding: 20px;
+  border-bottom: 1px solid grey;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.sezLista ul li.checked{
+  text-decoration: line-through;
+  color: grey;
+}
+
+.sezLista ul li:hover{
+  background-color: white;
+}
+
+.sezLista ul li i{
+  float: right;
+  font-size: 25px;
+}
+
+.logo{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.logo img{
+  width: 300px;
+}
+/* .sezLista ul li.last{
+  border: none;
+} */
